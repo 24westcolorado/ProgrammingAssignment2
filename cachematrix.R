@@ -4,18 +4,18 @@
 ## Write a short comment describing this function
 #
 # This function makes the special (caching) matrix.  It takes as an 
-# input an ordinary matrix.  Although, it doesn't need a matrix for 
+# input an ordinary matrix.  Although, it doesn't need a matrix 
 # to initialize the object.  
 #
 # The function outputs four functions: set, get, setinverse, and getinverse
 #
 # The set function sets the matrix in the special matrix object, and 
-# initializes the matrix as Null.
+# initializes the inverse matrix as Null.
 #
-# The get function gets the matrix (not the inverse)
+# The get function gets the matrix (not the inverse one)
 #
 # The setinverse sets the inverse of the matrix, i.e. after it has 
-# already been calculated
+# already been calculated (somewhere else, i.e. the cacheSolve function)
 #
 # The getinverse gets the stored inverse matrix
 
@@ -58,7 +58,7 @@ makeCacheMatrix <- function(x = matrix())
 # is defined by the above function, makeCacheMatrix().  
 #
 # The function first checks if the inverse has already been calculated.  
-# If it has, then the function gets it and returns.  Otherwise, the 
+# If it has, then the function gets it and returns it.  Otherwise, the 
 # function gets the matrix, calculate the inverse, sets the inverse in the 
 # special matrix object, and finally returns the inverse.  
 
